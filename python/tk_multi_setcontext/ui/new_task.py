@@ -1,90 +1,115 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'new_task.ui'
-#
-#      by: pyside-uic 0.2.13 running on PySide 1.1.0
-#
-# WARNING! All changes made in this file will be lost!
+################################################################################
+## Form generated from reading UI file 'new_task.ui'
+##
+## Created by: Qt User Interface Compiler version 5.15.2
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
 
-from tank.platform.qt import QtCore, QtGui
+from tank.platform.qt import QtCore
+for name, cls in QtCore.__dict__.items():
+    if isinstance(cls, type): globals()[name] = cls
+
+from tank.platform.qt import QtGui
+for name, cls in QtGui.__dict__.items():
+    if isinstance(cls, type): globals()[name] = cls
+
 
 class Ui_NewTask(object):
     def setupUi(self, NewTask):
-        NewTask.setObjectName("NewTask")
+        if not NewTask.objectName():
+            NewTask.setObjectName(u"NewTask")
         NewTask.resize(451, 289)
-        self.verticalLayout = QtGui.QVBoxLayout(NewTask)
-        self.verticalLayout.setObjectName("verticalLayout")
-        self.label_3 = QtGui.QLabel(NewTask)
+        self.verticalLayout = QVBoxLayout(NewTask)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.label_3 = QLabel(NewTask)
+        self.label_3.setObjectName(u"label_3")
         self.label_3.setWordWrap(True)
-        self.label_3.setObjectName("label_3")
+
         self.verticalLayout.addWidget(self.label_3)
-        self.gridLayout = QtGui.QGridLayout()
+
+        self.gridLayout = QGridLayout()
+        self.gridLayout.setObjectName(u"gridLayout")
         self.gridLayout.setHorizontalSpacing(20)
-        self.gridLayout.setObjectName("gridLayout")
-        self.label_4 = QtGui.QLabel(NewTask)
-        font = QtGui.QFont()
-        font.setWeight(75)
+        self.label_4 = QLabel(NewTask)
+        self.label_4.setObjectName(u"label_4")
+        font = QFont()
         font.setBold(True)
+        font.setWeight(75)
         self.label_4.setFont(font)
-        self.label_4.setObjectName("label_4")
+
         self.gridLayout.addWidget(self.label_4, 2, 0, 1, 1)
-        self.entity = QtGui.QLabel(NewTask)
-        self.entity.setObjectName("entity")
+
+        self.entity = QLabel(NewTask)
+        self.entity.setObjectName(u"entity")
+
         self.gridLayout.addWidget(self.entity, 2, 1, 1, 1)
-        self.label_6 = QtGui.QLabel(NewTask)
-        font = QtGui.QFont()
-        font.setWeight(75)
-        font.setBold(True)
+
+        self.label_6 = QLabel(NewTask)
+        self.label_6.setObjectName(u"label_6")
         self.label_6.setFont(font)
-        self.label_6.setObjectName("label_6")
+
         self.gridLayout.addWidget(self.label_6, 3, 0, 1, 1)
-        self.assigned_to = QtGui.QLabel(NewTask)
-        self.assigned_to.setObjectName("assigned_to")
+
+        self.assigned_to = QLabel(NewTask)
+        self.assigned_to.setObjectName(u"assigned_to")
+
         self.gridLayout.addWidget(self.assigned_to, 3, 1, 1, 1)
-        self.label = QtGui.QLabel(NewTask)
-        font = QtGui.QFont()
-        font.setWeight(75)
-        font.setBold(True)
+
+        self.label = QLabel(NewTask)
+        self.label.setObjectName(u"label")
         self.label.setFont(font)
-        self.label.setObjectName("label")
+
         self.gridLayout.addWidget(self.label, 4, 0, 1, 1)
-        self.pipeline_step = QtGui.QComboBox(NewTask)
-        self.pipeline_step.setObjectName("pipeline_step")
+
+        self.pipeline_step = QComboBox(NewTask)
+        self.pipeline_step.setObjectName(u"pipeline_step")
+
         self.gridLayout.addWidget(self.pipeline_step, 4, 1, 1, 1)
-        self.label_2 = QtGui.QLabel(NewTask)
-        font = QtGui.QFont()
-        font.setWeight(75)
-        font.setBold(True)
+
+        self.label_2 = QLabel(NewTask)
+        self.label_2.setObjectName(u"label_2")
         self.label_2.setFont(font)
-        self.label_2.setObjectName("label_2")
+
         self.gridLayout.addWidget(self.label_2, 5, 0, 1, 1)
-        self.task_name = QtGui.QLineEdit(NewTask)
-        self.task_name.setObjectName("task_name")
+
+        self.task_name = QLineEdit(NewTask)
+        self.task_name.setObjectName(u"task_name")
+
         self.gridLayout.addWidget(self.task_name, 5, 1, 1, 1)
+
         self.verticalLayout.addLayout(self.gridLayout)
-        spacerItem = QtGui.QSpacerItem(20, 19, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Expanding)
-        self.verticalLayout.addItem(spacerItem)
-        self.buttonBox = QtGui.QDialogButtonBox(NewTask)
-        self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
-        self.buttonBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Ok)
-        self.buttonBox.setObjectName("buttonBox")
+
+        self.verticalSpacer = QSpacerItem(20, 19, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout.addItem(self.verticalSpacer)
+
+        self.buttonBox = QDialogButtonBox(NewTask)
+        self.buttonBox.setObjectName(u"buttonBox")
+        self.buttonBox.setOrientation(Qt.Horizontal)
+        self.buttonBox.setStandardButtons(QDialogButtonBox.Cancel|QDialogButtonBox.Ok)
+
         self.verticalLayout.addWidget(self.buttonBox)
 
         self.retranslateUi(NewTask)
-        QtCore.QObject.connect(self.buttonBox, QtCore.SIGNAL("accepted()"), NewTask.accept)
-        QtCore.QObject.connect(self.buttonBox, QtCore.SIGNAL("rejected()"), NewTask.reject)
-        QtCore.QMetaObject.connectSlotsByName(NewTask)
+        self.buttonBox.accepted.connect(NewTask.accept)
+        self.buttonBox.rejected.connect(NewTask.reject)
+
+        QMetaObject.connectSlotsByName(NewTask)
+    # setupUi
 
     def retranslateUi(self, NewTask):
-        NewTask.setWindowTitle(QtGui.QApplication.translate("NewTask", "Dialog", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_3.setText(QtGui.QApplication.translate("NewTask", "<b><big>Create a new Task</big></b>\n"
+        NewTask.setWindowTitle(QCoreApplication.translate("NewTask", u"Dialog", None))
+        self.label_3.setText(QCoreApplication.translate("NewTask", u"<b><big>Create a new Task</big></b>\n"
 "<br><br>\n"
 "Type in a Task Name and select a Pipeline Step below.\n"
-"<br><br>", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_4.setText(QtGui.QApplication.translate("NewTask", "Entity", None, QtGui.QApplication.UnicodeUTF8))
-        self.entity.setText(QtGui.QApplication.translate("NewTask", "Shot ABC 123", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_6.setText(QtGui.QApplication.translate("NewTask", "Assigned to", None, QtGui.QApplication.UnicodeUTF8))
-        self.assigned_to.setText(QtGui.QApplication.translate("NewTask", "Mr John Smith", None, QtGui.QApplication.UnicodeUTF8))
-        self.label.setText(QtGui.QApplication.translate("NewTask", "Pipeline Step", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_2.setText(QtGui.QApplication.translate("NewTask", "Task Name", None, QtGui.QApplication.UnicodeUTF8))
-
+"<br><br>", None))
+        self.label_4.setText(QCoreApplication.translate("NewTask", u"Entity", None))
+        self.entity.setText(QCoreApplication.translate("NewTask", u"Shot ABC 123", None))
+        self.label_6.setText(QCoreApplication.translate("NewTask", u"Assigned to", None))
+        self.assigned_to.setText(QCoreApplication.translate("NewTask", u"Mr John Smith", None))
+        self.label.setText(QCoreApplication.translate("NewTask", u"Pipeline Step", None))
+        self.label_2.setText(QCoreApplication.translate("NewTask", u"Task Name", None))
+    # retranslateUi
